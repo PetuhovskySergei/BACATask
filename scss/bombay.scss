@@ -1,0 +1,619 @@
+@import "color-map";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  background: url(../images/bombay-background.jpg);
+  background-size: cover;
+}
+
+h3, h2, h1 {
+  color: $black;
+  text-transform: uppercase;
+  font-family: SapphireRegular-DisplayLiga,Goudy Old Style,Garamond,Big Caslon,Times New Roman,serif;
+  &:after {
+    content: " ";
+    display: block;
+    background-color: $gold;
+    height: 1px;
+    width: 60px;
+    margin: .5rem auto auto auto;
+  }
+}
+
+span, p {
+  font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height: 1.4;
+  text-align: left;
+  color: $darkblue;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h1 {
+  font-size: 2.125rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+header {
+  background: url(../images/bombay-header-bg.png);
+  background-size: cover;
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  color: $white;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  box-sizing: border-box;
+  .headerNavMenu {
+    display: none;
+  }
+  .logo {
+    img {
+      height: 40px;
+    }
+  }
+  .spotlightControl i {
+    display: inline;
+  }
+  .spotlightControlBtn {
+    display: none;
+  }
+  h1:after {
+    display: none;
+  }
+}
+
+section {
+  display: flex;
+  position: relative;
+  &.banner {
+    margin-top: 65px;
+    justify-content: center;
+    background: url(../images/bombay-banner.jpg) no-repeat;
+    background-size: cover;
+    .bannerText {
+      position: absolute;
+      top: 32px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        color: $black;
+        font-size: 1.8rem;
+        width: 220px;
+        line-height: 1.2em;
+        text-align: center;
+        &:after {
+          display: none;
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+    .bombayBannerBtn {
+      margin-top: 30px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &.goldenSection {
+    iframe {
+      width: 100%;
+    }
+  }
+  &.cocktail-description {
+    .pageBlock {
+      padding: 0 0 1.5rem;
+      p {
+        padding: 0 1.5rem;
+        margin: 1.25em 0;
+      }
+    }
+  }
+  &.cocktail-page {
+    padding: 20px 0;
+    .pageMainBlock {
+      margin-top: 50px;
+      img {
+        display: none;
+      }
+      &.ingredients {
+        ul {
+          margin-top: 10px;
+          li {
+            list-style-type: none;
+            text-align: left;
+            &:before {
+              content: "◆";
+              color: $gold;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      &.cocktailMethod {
+        li {
+          list-style-type: none;
+          text-align: left;
+          margin-top: 10px;
+          .methodNumber {
+            margin-right: 3px;
+          }
+        }
+      }
+      .pageBlock {
+        align-items: flex-start;
+        .mainBtn {
+          display: none;
+        }
+      }
+    }
+  }
+  &.share {
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bombay-share.jpg) no-repeat center;
+    background-size: cover;
+    height: 453px;
+    .mainBtn {
+      margin-top: 20px;
+      color: $white;
+      border-color: $white;
+      justify-content: space-around;
+      div {
+        border-right: 2px solid $white;
+      }
+    }
+    h1 {
+      color: white;
+      font-size: 1.125rem;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &.keepInTouch, &.singleProduct {
+    display: none;
+  }
+  &.bombayInfo {
+    padding: 50px 0;
+     .mainPageBlock {
+       margin-top: 20px;
+       img {
+         width: 100%;
+       }
+       .pageBlock {
+         h3 {
+           font-size: 1.25rem;
+           text-align: center;
+         }
+         p {
+           margin-top: 20px;
+           text-align: center;
+         }
+         .mainBtn {
+           margin-top: 20px;
+         }
+       }
+     }
+  }
+}
+
+.pageBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 71.75em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  position: relative;
+}
+
+.mainBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 36px;
+  border: none;
+  background: $gold;
+  color: $white;
+  text-transform: uppercase;
+}
+
+footer {
+  padding-top: 20px;
+  background-color: $white;
+  border-top: 1px solid $gold;
+  .followUs {
+    ul {
+      display: flex;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin: 20px 5px ;
+        border: .0625rem solid $gold;
+        border-radius: 100%;
+        i {
+          color: $gold;
+        }
+      }
+    }
+  }
+  .helpfulLinks {
+    ul {
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 186px;
+        height: 36px;
+        border: none;
+        background: $gold;
+        text-transform: uppercase;
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+  }
+  &>.footerItem {
+    padding: 30px 0;
+  }
+  .policyLinks {
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid $gold;
+    border-bottom: 1px solid $gold;
+    padding: 10px 0;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li {
+        margin: 10px 0;
+        display: flex;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .copyright {
+    padding: 10px 0;
+    img {
+      display: none;
+    }
+    .pageBlock span {
+      text-align: center;
+      font-size: .75rem;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    background: url(../images/bombay-header-bg.png) no-repeat;
+    background-size: cover;
+    height: 26px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-device-width: 1025px) {
+  h3:after {
+    margin: .5rem 0 0 0;
+  }
+
+  header {
+    height: 115px;
+    flex-direction: column-reverse;
+    padding: 0;
+    .headerNav {
+      width: 100%;
+      height: 50px;
+      background-color: $white;
+      display: flex;
+      i {
+        display: none;
+      }
+      .headerNavMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        li {
+          display: block;
+          border-right: 1px solid $black;
+          padding: 0 30px;
+          a {
+            color: $black;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+    .spotlightControl {
+      position: absolute;
+      right: 45px;
+      top: 25px;
+      i {
+        display: none;
+      }
+      .spotlightControlBtn {
+        display: flex;
+        .slBtn {
+          margin: 0 10px;
+          font-size: 13px;
+          border-bottom: 1px solid $gold;
+        }
+      }
+    }
+    .logo {
+      margin-top: 10px;
+    }
+  }
+
+  section {
+    &.banner {
+      height: 350px;
+      .bannerText {
+        top: 100px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          width: 500px;
+          font-size: 1.875rem;
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+    &.cocktail-description {
+      .pageMainBlock {
+        display: flex;
+        align-items: center;
+        img {
+          width: 480px;
+          margin-right: 20px;
+        }
+        .pageBlock {
+          align-items: flex-start;
+          p {
+            padding: 0;
+          }
+        }
+      }
+    }
+    &.cocktail-page {
+      .pageBlockMain {
+        display: flex;
+        &> .pageMainBlock{
+          width: 50%;
+        }
+      }
+    }
+    &.bombayInfo {
+      .pageMainBlock {
+        display: flex;
+        justify-content: space-between;
+        &> .mainPageBlock {
+          width: 48%;
+          h3:after {
+            margin: .5rem auto auto auto;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .pageBlock {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      .followUs {
+        text-align: left;
+        h3:after {
+          margin: .5rem 0 auto auto;
+        }
+      }
+    }
+    .policyLinks ul {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+  h3:after {
+    margin: .5rem 0 0 0;
+  }
+  section {
+    &.banner {
+      height: 315px;
+      .bannerText {
+        top: 70px;
+        h1 {
+          width: 300px;
+          font-size: 1.875rem;
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+    &.cocktail-description {
+      .pageMainBlock {
+        display: flex;
+        align-items: center;
+        img {
+          width: 380px;
+          margin-right: 20px;
+        }
+        .pageBlock {
+          align-items: flex-start;
+          p {
+            padding: 0;
+          }
+        }
+      }
+    }
+    &.cocktail-page {
+      .pageMainBlock {
+        display: flex;
+        &> .pageMainBlock{
+          width: 50%;
+        }
+      }
+    }
+    &.bombayInfo {
+      .pageMainBlock {
+        display: flex;
+        justify-content: space-between;
+        &> .mainPageBlock {
+          width: 48%;
+          h3:after {
+            margin: .5rem auto auto auto;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .pageBlock {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      .followUs {
+        text-align: left;
+        h3:after {
+          margin: .5rem 0 auto auto;
+        }
+      }
+    }
+    .policyLinks ul {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-device-width: 569px) and (max-device-width: 768px) {
+  h3:after {
+    margin: .5rem 0 0 0;
+  }
+  section {
+    &.banner {
+      height: 190px;
+      .bannerText h1 {
+        width: 300px;
+        &:after {
+          display: block;
+        }
+      }
+    }
+    &.cocktail-description {
+      .pageBlock {
+        align-items: flex-start;
+        p {
+          padding: 0;
+        }
+      }
+    }
+    &.bombayInfo h3:after{
+      margin: .5rem auto auto auto;
+    }
+  }
+  footer {
+    h3:after {
+      margin: .5rem auto auto auto;
+    }
+  }
+}
+
+@media screen and (max-device-width: 568px){
+  body {
+    font-size: .9375rem;
+  }
+
+  span, p {
+    font-size: .875rem;
+  }
+
+  .mainBtn {
+    width: 186px;
+    i {
+      display: none;
+    }
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  section {
+    &.banner{
+      .container {
+        align-items: center;
+      }
+      height: 454px;
+      background: url(../images/bombay-banner-mobile.jpg) no-repeat;
+      background-size: cover;
+      .bannerText {
+        right: auto;
+        i {
+          display: block;
+        }
+      }
+    }
+    &.goldenSection {
+      height: 170px;
+    }
+  }
+}

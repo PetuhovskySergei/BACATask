@@ -1,0 +1,621 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  background: url(../images/bombay-background.jpg);
+  background-size: cover;
+}
+
+h3, h2, h1 {
+  color: #000000;
+  text-transform: uppercase;
+  font-family: SapphireRegular-DisplayLiga,Goudy Old Style,Garamond,Big Caslon,Times New Roman,serif;
+}
+
+h3:after, h2:after, h1:after {
+  content: " ";
+  display: block;
+  background-color: #a88a46;
+  height: 1px;
+  width: 60px;
+  margin: .5rem auto auto auto;
+}
+
+span, p {
+  font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height: 1.4;
+  text-align: left;
+  color: #14143c;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h1 {
+  font-size: 2.125rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+header {
+  background: url(../images/bombay-header-bg.png);
+  background-size: cover;
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  color: #ffffff;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+header .headerNavMenu {
+  display: none;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header .spotlightControl i {
+  display: inline;
+}
+
+header .spotlightControlBtn {
+  display: none;
+}
+
+header h1:after {
+  display: none;
+}
+
+section {
+  display: flex;
+  position: relative;
+}
+
+section.banner {
+  margin-top: 65px;
+  justify-content: center;
+  background: url(../images/bombay-banner.jpg) no-repeat;
+  background-size: cover;
+}
+
+section.banner .bannerText {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.banner .bannerText h1 {
+  color: #000000;
+  font-size: 1.8rem;
+  width: 220px;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+section.banner .bannerText h1:after {
+  display: none;
+}
+
+section.banner .bannerText img {
+  display: none;
+}
+
+section.banner .bombayBannerBtn {
+  margin-top: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+section.goldenSection iframe {
+  width: 100%;
+}
+
+section.cocktail-description .pageBlock {
+  padding: 0 0 1.5rem;
+}
+
+section.cocktail-description .pageBlock p {
+  padding: 0 1.5rem;
+  margin: 1.25em 0;
+}
+
+section.cocktail-page {
+  padding: 20px 0;
+}
+
+section.cocktail-page .pageMainBlock {
+  margin-top: 50px;
+}
+
+section.cocktail-page .pageMainBlock img {
+  display: none;
+}
+
+section.cocktail-page .pageMainBlock.ingredients ul {
+  margin-top: 10px;
+}
+
+section.cocktail-page .pageMainBlock.ingredients ul li {
+  list-style-type: none;
+  text-align: left;
+}
+
+section.cocktail-page .pageMainBlock.ingredients ul li:before {
+  content: "◆";
+  color: #a88a46;
+  margin-right: 5px;
+}
+
+section.cocktail-page .pageMainBlock.cocktailMethod li {
+  list-style-type: none;
+  text-align: left;
+  margin-top: 10px;
+}
+
+section.cocktail-page .pageMainBlock.cocktailMethod li .methodNumber {
+  margin-right: 3px;
+}
+
+section.cocktail-page .pageMainBlock .pageBlock {
+  align-items: flex-start;
+}
+
+section.cocktail-page .pageMainBlock .pageBlock .mainBtn {
+  display: none;
+}
+
+section.share {
+  justify-content: center;
+  align-items: center;
+  background: url(../images/bombay-share.jpg) no-repeat center;
+  background-size: cover;
+  height: 453px;
+}
+
+section.share .mainBtn {
+  margin-top: 20px;
+  color: #ffffff;
+  border-color: #ffffff;
+  justify-content: space-around;
+}
+
+section.share .mainBtn div {
+  border-right: 2px solid #ffffff;
+}
+
+section.share h1 {
+  color: white;
+  font-size: 1.125rem;
+}
+
+section.share h1:after {
+  display: none;
+}
+
+section.keepInTouch, section.singleProduct {
+  display: none;
+}
+
+section.bombayInfo {
+  padding: 50px 0;
+}
+
+section.bombayInfo .mainPageBlock {
+  margin-top: 20px;
+}
+
+section.bombayInfo .mainPageBlock img {
+  width: 100%;
+}
+
+section.bombayInfo .mainPageBlock .pageBlock h3 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+section.bombayInfo .mainPageBlock .pageBlock p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+section.bombayInfo .mainPageBlock .pageBlock .mainBtn {
+  margin-top: 20px;
+}
+
+.pageBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pageBlock img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 71.75em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  position: relative;
+}
+
+.mainBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 36px;
+  border: none;
+  background: #a88a46;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+footer {
+  padding-top: 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #a88a46;
+}
+
+footer .followUs ul {
+  display: flex;
+}
+
+footer .followUs ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 20px 5px;
+  border: 0.0625rem solid #a88a46;
+  border-radius: 100%;
+}
+
+footer .followUs ul li i {
+  color: #a88a46;
+}
+
+footer .helpfulLinks ul {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer .helpfulLinks ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 186px;
+  height: 36px;
+  border: none;
+  background: #a88a46;
+  text-transform: uppercase;
+}
+
+footer .helpfulLinks ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer > .footerItem {
+  padding: 30px 0;
+}
+
+footer .policyLinks {
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #a88a46;
+  border-bottom: 1px solid #a88a46;
+  padding: 10px 0;
+}
+
+footer .policyLinks ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .policyLinks ul li {
+  margin: 10px 0;
+  display: flex;
+}
+
+footer .policyLinks ul li a {
+  text-decoration: none;
+}
+
+footer .copyright {
+  padding: 10px 0;
+}
+
+footer .copyright img {
+  display: none;
+}
+
+footer .copyright .pageBlock span {
+  text-align: center;
+  font-size: .75rem;
+}
+
+footer:after {
+  content: "";
+  display: block;
+  background: url(../images/bombay-header-bg.png) no-repeat;
+  background-size: cover;
+  height: 26px;
+  width: 100%;
+}
+
+@media screen and (min-device-width: 1025px) {
+  h3:after {
+    margin: .5rem 0 0 0;
+  }
+  header {
+    height: 115px;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  header .headerNav {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+  }
+  header .headerNav i {
+    display: none;
+  }
+  header .headerNav .headerNavMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  header .headerNav .headerNavMenu li {
+    display: block;
+    border-right: 1px solid #000000;
+    padding: 0 30px;
+  }
+  header .headerNav .headerNavMenu li a {
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  header .headerNav .headerNavMenu li:last-child {
+    border-right: none;
+  }
+  header .spotlightControl {
+    position: absolute;
+    right: 45px;
+    top: 25px;
+  }
+  header .spotlightControl i {
+    display: none;
+  }
+  header .spotlightControl .spotlightControlBtn {
+    display: flex;
+  }
+  header .spotlightControl .spotlightControlBtn .slBtn {
+    margin: 0 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #a88a46;
+  }
+  header .logo {
+    margin-top: 10px;
+  }
+  section.banner {
+    height: 350px;
+  }
+  section.banner .bannerText {
+    top: 100px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.banner .bannerText h1 {
+    width: 500px;
+    font-size: 1.875rem;
+  }
+  section.banner .bannerText h1:after {
+    display: block;
+  }
+  section.cocktail-description .pageMainBlock {
+    display: flex;
+    align-items: center;
+  }
+  section.cocktail-description .pageMainBlock img {
+    width: 480px;
+    margin-right: 20px;
+  }
+  section.cocktail-description .pageMainBlock .pageBlock {
+    align-items: flex-start;
+  }
+  section.cocktail-description .pageMainBlock .pageBlock p {
+    padding: 0;
+  }
+  section.cocktail-page .pageBlockMain {
+    display: flex;
+  }
+  section.cocktail-page .pageBlockMain > .pageMainBlock {
+    width: 50%;
+  }
+  section.bombayInfo .pageMainBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+  section.bombayInfo .pageMainBlock > .mainPageBlock {
+    width: 48%;
+  }
+  section.bombayInfo .pageMainBlock > .mainPageBlock h3:after {
+    margin: .5rem auto auto auto;
+  }
+  footer .pageBlock {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  footer .pageBlock .followUs {
+    text-align: left;
+  }
+  footer .pageBlock .followUs h3:after {
+    margin: .5rem 0 auto auto;
+  }
+  footer .policyLinks ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+  h3:after {
+    margin: .5rem 0 0 0;
+  }
+  section.banner {
+    height: 315px;
+  }
+  section.banner .bannerText {
+    top: 70px;
+  }
+  section.banner .bannerText h1 {
+    width: 300px;
+    font-size: 1.875rem;
+  }
+  section.banner .bannerText h1:after {
+    display: block;
+  }
+  section.cocktail-description .pageMainBlock {
+    display: flex;
+    align-items: center;
+  }
+  section.cocktail-description .pageMainBlock img {
+    width: 380px;
+    margin-right: 20px;
+  }
+  section.cocktail-description .pageMainBlock .pageBlock {
+    align-items: flex-start;
+  }
+  section.cocktail-description .pageMainBlock .pageBlock p {
+    padding: 0;
+  }
+  section.cocktail-page .pageMainBlock {
+    display: flex;
+  }
+  section.cocktail-page .pageMainBlock > .pageMainBlock {
+    width: 50%;
+  }
+  section.bombayInfo .pageMainBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+  section.bombayInfo .pageMainBlock > .mainPageBlock {
+    width: 48%;
+  }
+  section.bombayInfo .pageMainBlock > .mainPageBlock h3:after {
+    margin: .5rem auto auto auto;
+  }
+  footer .pageBlock {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  footer .pageBlock .followUs {
+    text-align: left;
+  }
+  footer .pageBlock .followUs h3:after {
+    margin: .5rem 0 auto auto;
+  }
+  footer .policyLinks ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-device-width: 569px) and (max-device-width: 768px) {
+  h3:after {
+    margin: .5rem 0 0 0;
+  }
+  section.banner {
+    height: 190px;
+  }
+  section.banner .bannerText h1 {
+    width: 300px;
+  }
+  section.banner .bannerText h1:after {
+    display: block;
+  }
+  section.cocktail-description .pageBlock {
+    align-items: flex-start;
+  }
+  section.cocktail-description .pageBlock p {
+    padding: 0;
+  }
+  section.bombayInfo h3:after {
+    margin: .5rem auto auto auto;
+  }
+  footer h3:after {
+    margin: .5rem auto auto auto;
+  }
+}
+
+@media screen and (max-device-width: 568px) {
+  body {
+    font-size: .9375rem;
+  }
+  span, p {
+    font-size: .875rem;
+  }
+  .mainBtn {
+    width: 186px;
+  }
+  .mainBtn i {
+    display: none;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  section.banner {
+    height: 454px;
+    background: url(../images/bombay-banner-mobile.jpg) no-repeat;
+    background-size: cover;
+  }
+  section.banner .container {
+    align-items: center;
+  }
+  section.banner .bannerText {
+    right: auto;
+  }
+  section.banner .bannerText i {
+    display: block;
+  }
+  section.goldenSection {
+    height: 170px;
+  }
+}
