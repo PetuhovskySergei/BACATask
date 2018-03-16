@@ -316,6 +316,11 @@ footer {
             text-transform: uppercase;
             text-decoration: none;
             font-weight: bold;
+            padding: 10px;
+            &:hover {
+              background: $brown;
+              border-radius: 20px;
+            }
           }
         }
       }

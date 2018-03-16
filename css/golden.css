@@ -399,6 +399,11 @@ footer:after {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
+  }
+  header .headerNav .headerNavMenu li a:hover {
+    background: #5a291e;
+    border-radius: 20px;
   }
   header .spotlightControl {
     position: static;
