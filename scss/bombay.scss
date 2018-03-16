@@ -1,14 +1,5 @@
 @import "color-map";
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  height: 100%;
-  font-size: 16px;
-}
+@import "main";
 
 body {
   height: 100%;
@@ -35,18 +26,6 @@ span, p {
   line-height: 1.4;
   text-align: left;
   color: $darkblue;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h1 {
-  font-size: 2.125rem;
-}
-
-h3 {
-  font-size: 2rem;
 }
 
 header {
@@ -228,16 +207,6 @@ section {
   img {
     width: 100%;
   }
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-width: 71.75em;
-  margin: 0 auto;
-  padding: 0 1.5em;
-  position: relative;
 }
 
 .mainBtn {

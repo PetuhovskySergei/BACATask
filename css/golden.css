@@ -10,14 +10,13 @@
   padding: 0;
 }
 
-html {
+html, body {
   height: 100%;
   font-size: 16px;
 }
 
-body {
-  height: 100%;
-  background: #000000;
+main {
+  flex: 1 0 auto;
 }
 
 .container {
@@ -30,8 +29,25 @@ body {
   position: relative;
 }
 
-main {
-  flex: 1 0 auto;
+h2 {
+  font-size: 2.5rem;
+}
+
+h1 {
+  font-size: 2.125rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+body {
+  height: 100%;
+  background: #000000;
 }
 
 section {
@@ -72,7 +88,6 @@ section.banner {
   height: 276px;
   background: url(../images/banner-img-mobile.jpg) no-repeat center;
   background-size: 100%;
-  justify-content: center;
 }
 
 section.banner .bannerText {
@@ -229,18 +244,6 @@ h3:after, h2:after, h1:after {
   height: 2px;
   width: 60px;
   margin: .5rem auto auto auto;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h1 {
-  font-size: 2.125rem;
-}
-
-h3 {
-  font-size: 2rem;
 }
 
 .pageBlock {
@@ -433,7 +436,6 @@ footer:after {
   section.banner .bannerText {
     text-align: center;
     top: 130px;
-    margin-left: 250px;
   }
   section.banner .bannerText h1 {
     width: 435px;
@@ -623,7 +625,14 @@ footer:after {
   section.banner {
     height: 454px;
   }
+  section.banner .bannerText {
+    position: static;
+    margin-top: 40px;
+  }
   section.goldenSection {
     height: 75px;
+  }
+  section.singleProduct .pageBlock {
+    height: 100%;
   }
 }

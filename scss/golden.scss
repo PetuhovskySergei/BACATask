@@ -1,39 +1,9 @@
 @import "color-map";
-
-@font-face {
-  font-family: norwester;
-  src: url(../fonts/norwester.otf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  height: 100%;
-  font-size: 16px;
-}
+@import "main";
 
 body {
   height: 100%;
   background: $black;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-width: 71.75em;
-  margin: 0 auto;
-  padding: 0 1.5em;
-  position: relative;
-}
-
-main {
-  flex: 1 0 auto;
 }
 
 section {
@@ -67,7 +37,6 @@ section {
     height: 276px;
     background: url(../images/banner-img-mobile.jpg) no-repeat center;
     background-size: 100%;
-    justify-content: center;
     .bannerText {
       position: absolute;
       top: 32px;
@@ -205,17 +174,7 @@ h3, h2, h1 {
   }
 }
 
-h2 {
-  font-size: 2.5rem;
-}
 
-h1 {
-  font-size: 2.125rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
 
 .pageBlock {
   display: flex;
@@ -401,7 +360,6 @@ footer {
       .bannerText {
         text-align: center;
         top: 130px;
-        margin-left: 250px;
         h1 {
           width: 435px;
           font-size: 3.75rem;
@@ -623,9 +581,18 @@ footer {
   section {
     &.banner{
       height: 454px;
+      .bannerText {
+        position: static;
+        margin-top: 40px;
+      }
     }
     &.goldenSection {
       height: 75px;
+    }
+    &.singleProduct {
+      .pageBlock{
+        height: 100%;
+      }
     }
   }
 }

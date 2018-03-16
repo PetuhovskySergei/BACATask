@@ -1,12 +1,49 @@
 @charset "UTF-8";
+@font-face {
+  font-family: norwester;
+  src: url(../fonts/norwester.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-html {
+html, body {
   height: 100%;
   font-size: 16px;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 71.75em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  position: relative;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h1 {
+  font-size: 2.125rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+footer {
+  flex: 0 0 auto;
 }
 
 body {
@@ -35,18 +72,6 @@ span, p {
   line-height: 1.4;
   text-align: left;
   color: #14143c;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h1 {
-  font-size: 2.125rem;
-}
-
-h3 {
-  font-size: 2rem;
 }
 
 header {
@@ -253,16 +278,6 @@ section.bombayInfo .mainPageBlock .pageBlock .mainBtn {
 
 .pageBlock img {
   width: 100%;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-width: 71.75em;
-  margin: 0 auto;
-  padding: 0 1.5em;
-  position: relative;
 }
 
 .mainBtn {
